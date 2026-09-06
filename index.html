@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jungle Dash</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">JD</span><span>Jungle Dash</span></div>
+      <div class="status-strip" aria-label="Game status">
+        <span class="status-item"><span class="status-label">Score</span><strong id="score">0000</strong></span>
+        <span class="status-item"><span class="status-label">Lives</span><strong id="lives">♥♥♥</strong></span>
+        <span class="status-item"><span class="status-label">Time</span><strong id="timer">60</strong></span>
+      </div>
+    </header>
+
+    <section class="game-frame" aria-label="Jungle Dash game">
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Platform game canvas"></canvas>
+      <div class="screen-panel" id="startScreen">
+        <p class="eyebrow">EXPEDITION 01</p>
+        <h1>Jungle Dash</h1>
+        <p class="intro">Race through the emerald canopy, snatch every treasure, and reach the ancient gate.</p>
+        <button class="primary-button" id="playButton">Play Game <span>→</span></button>
+        <p class="controls-hint">Move <kbd>A</kbd><kbd>D</kbd> or <kbd>←</kbd><kbd>→</kbd> <span>·</span> Jump <kbd>Space</kbd></p>
+      </div>
+      <div class="screen-panel hidden" id="endScreen">
+        <p class="eyebrow" id="endEyebrow">EXPEDITION COMPLETE</p>
+        <h2 id="endTitle">You made it!</h2>
+        <p class="intro" id="endMessage">The jungle gate opens. Your haul is impressive.</p>
+        <div class="final-score">FINAL SCORE <strong id="finalScore">0000</strong></div>
+        <button class="primary-button" id="replayButton">Run it back <span>↻</span></button>
+      </div>
+    </section>
+    <footer class="bottom-bar">
+      <span><i class="legend-dot coin-dot"></i> Collect relics</span>
+      <span><i class="legend-dot danger-dot"></i> Dodge wild things</span>
+      <span class="goal">Goal: reach the golden gate <span>◆</span></span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
